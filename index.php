@@ -1,7 +1,7 @@
 <?php
 
 	// MINIXED is a minimal but nice-looking PHP directory indexer.
-	// More at https://github.com/lorenzos/Minixed
+	// Source code by https://github.com/lorenzos/Minixed
 
 	// =============================
 	// Configuration                
@@ -10,12 +10,12 @@
 	$browseDirectories = false; // Navigate into sub-folders
 	$title = 'Index of {{path}}';
 	$subtitle = '{{files}} objects in this folder, {{size}} total'; // Empty to disable
-	$breadcrumbs = false; // Make links in {{path}}
+	$breadcrumbs = true; // Make links in {{path}}
 	$showParent = false; // Display a (parent directory) link
 	$showDirectories = true;
 	$showDirectoriesFirst = true; // Lists directories first when sorting by name
 	$showHiddenFiles = false; // Display files starting with "." too
-	$alignment = 'left'; // You can use 'left' or 'center'
+	$alignment = 'center'; // You can use 'left' or 'center'
 	$showIcons = true;
 	$dateFormat = 'd/m/y H:i'; // Used in date() function
 	$sizeDecimals = 1;
@@ -199,14 +199,13 @@
 		body {
 			text-align: center;
 			font-family: sans-serif;
-			font-size: 13px;
+			font-size: 16px;
 			color: #000000;
 		}
 		
 		#wrapper {
-			max-width: 600px;
-			*width: 600px;
 			margin: 0 auto;
+			padding: 30px;
 			text-align: left;
 		}
 		
@@ -219,27 +218,27 @@
 		}
 		
 		h1 {
-			font-size: 21px;
+			font-size: 28px;
 			padding: 0 10px;
 			margin: 20px 0 0;
 			font-weight: bold;
 		}
 		
 		h2 {
-			font-size: 14px;
+			font-size: 20px;
 			padding: 0 10px;
 			margin: 10px 0 0;
-			color: #999999;
+			color: #000000;
 			font-weight: normal;
 		}
 		
 		a {
-			color: #003399;
+			color: #000000;
 			text-decoration: none;
 		}
 		
 		a:hover {
-			color: #0066cc;
+			color: #000000;
 			text-decoration: underline;
 		}
 		
@@ -255,7 +254,7 @@
 		}
 		
 		ul li:hover {
-			background-color: #f3f3f3;
+			background-color: #ffffff;
 		}
 		
 		ul li .date {
@@ -405,7 +404,7 @@
 		<?php if ($showFooter): ?>
 			
 			<p id="footer">
-				Powered by <a href="https://github.com/lorenzos/Minixed" target="_blank">Minixed</a>, a PHP directory indexer
+				Powered by <a href="https://github.com/lorenzos/Minixed" target="_blank">Minixed</a> PHP directory indexer
 			</p>
 			
 		<?php endif; ?>
